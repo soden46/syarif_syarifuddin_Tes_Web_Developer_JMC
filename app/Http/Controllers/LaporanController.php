@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\EksportExcel;
-use App\Models\kabupaten;
+use App\Models\Kabupaten;
 use Illuminate\Http\Request;
 use App\Models\Penduduk;
 use App\Models\Provinsi;
@@ -44,7 +44,7 @@ class LaporanController extends Controller
         // Ambil Data Provinsi
         $provinsi = Provinsi::get();
         // Ambil data Kabupaten Berdasarkan ID Provinsi
-        $kabupaten = kabupaten::where('provinsi_id', '=', $idprov)->get();
+        $kabupaten = Kabupaten::where('provinsi_id', '=', $idprov)->get();
 
         return view('contents.penduduk.laporan', compact('datawarga', 'request', 'jumlah', 'provinsi', 'kabupaten'));
     }

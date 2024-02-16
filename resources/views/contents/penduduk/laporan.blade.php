@@ -59,7 +59,7 @@
                         <td>{{$data->nama}}</td>
                         <td>{{$data->nik}}</td>
                         <td>{{$data->tgl_lahir}}</td>
-                        <td>{{$data->alamat.", ".$data->Kabupaten.", ".$data->Provinsi}}</td>
+                        <td>{{$data->alamat.", ".$data->kabupaten.", ".$data->provinsi}}</td>
                         <td>{{$data->jenis_kelamin}}</td>
                         <td>{{$data->created_at}}</td>
 
